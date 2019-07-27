@@ -1,5 +1,5 @@
 {
-  "name": "with-lifecycle",
+  "name": "withlifecycle",
   "version": "1.0.0",
   "description": "Higher order function that adds before and after lifecycle methods to any function",
   "main": "index.js",
