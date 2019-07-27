@@ -1,6 +1,6 @@
 {
   "name": "with-lifecycle-func",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Higher order function that adds before and after lifecycle methods to any function",
   "main": "index.js",
   "keywords": [],
