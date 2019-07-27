@@ -3,7 +3,9 @@ function withLifecycle({ before, after }) {
     return async function(...args) {
       if (before) {
         await before();
-        await fn.call(null, ...args);
+      }
+      await fn.call(null, ...args);
+      if (after) {
         await after();
       }
     }
@@ -11,4 +13,3 @@ function withLifecycle({ before, after }) {
 }
 
 module.exports = withLifecycle;
-

@@ -46,4 +46,8 @@ findAndSayHelloTo('Alex');
   // 'Return to take a nice nap.'
 ```
 
+## Params and stuff
+
+
+
 ## More Super serious examples
