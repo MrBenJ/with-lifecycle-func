@@ -3,7 +3,7 @@ function withLifecycle({ before, after }) {
     return async function(...args) {
       if (before) {
         await before();
-        await fn.call(...args);
+        await fn.call(null, ...args);
         await after();
       }
     }
