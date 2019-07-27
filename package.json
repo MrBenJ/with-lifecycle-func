@@ -1,0 +1,9 @@
+{
+  "name": "with-lifecycle",
+  "version": "1.0.0",
+  "description": "Higher order function that adds before and after lifecycle methods to any function",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Ben Junya <bjunya@gmail.com>",
+  "license": "MIT"
+}
