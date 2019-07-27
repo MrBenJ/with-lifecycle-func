@@ -1,4 +1,4 @@
-# withlifecycle
+# with-lifecycle-func
 
 ### Add a before and after logic to _any_ function
 
@@ -7,11 +7,11 @@
 * Written in pure JS
 
 ## Installation
-`npm install --save @mrbenj/with-lifecycle`
+`npm install --save with-lifecycle-func`
 
 ## Usage and example
 ```js
-const withLifecycle = require('@mrbenj/with-lifecycle');
+const withLifecycle = require('with-lifecycle-func');
 
 const sayHelloTo = friend => {
   console.log(`Hello ${friend}!`);
