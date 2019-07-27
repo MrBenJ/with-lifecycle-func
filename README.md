@@ -7,11 +7,11 @@
 * Written in pure JS
 
 ## Installation
-`npm install --save withlifecycle`
+`npm install --save @mrbenj/with-lifecycle`
 
 ## Usage and example
 ```js
-const withLifecycle = require('withlifecycle');
+const withLifecycle = require('@mrbenj/with-lifecycle');
 
 const sayHelloTo = friend => {
   console.log(`Hello ${friend}!`);
