@@ -77,6 +77,7 @@ const before = () => {
 const fn = async () => {
   const response = await fetch('http://127.0.0.1:9002/');
   const json = await response.json();
+  console.log(json);
 }
 
 const after = server => {
