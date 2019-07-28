@@ -5,6 +5,7 @@
 * Zero Dependencies
 * Minimum Node version: `v8.x.x`
 * Written in pure JS
+* Allows passing of arguments to the original and `after` function for proper cleanup.
 
 ## Installation
 `npm install --save with-lifecycle-func`
@@ -48,6 +49,52 @@ findAndSayHelloTo('Alex');
 
 ## Params and stuff
 
+Write me....
 
 
-## More Super serious examples
+## A more super serious example
+
+### Start an express server, make some requests to it, then close the server
+
+```js
+const withLifecycle = require('with-lifecycle-func');
+const express = require('express');
+const fetch = require('isomorphic-fetch');
+
+const app = express();
+
+const before = () => {
+  app.get('/', (req, res) => {
+    res.send({ "hello": "world" });
+  });
+
+  const server = app.listen(9002, () => {
+    console.log("listening on port 9002");
+  });
+  return server;
+}
+
+const fn = async () => {
+  const response = await fetch('http://127.0.0.1:9002/');
+  const json = await response.json();
+}
+
+const after = server => {
+  console.log('done');
+  server.close();
+}
+
+const finito = withLifecycle({
+  before,
+  after
+})(fn);
+
+finito();
+
+// Output:
+// listening on port 9002
+// { "hello": "world" }
+// done
+
+```
+This example also shows off how you can pass arguments created in `before` to your function, and the `after` function, like the `server` created by express.
